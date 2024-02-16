@@ -1,5 +1,6 @@
 Company.destroy_all
 Contact.destroy_all
+Post.destroy_all
 
 apple = Company.new
 apple["name"] = "Apple"
