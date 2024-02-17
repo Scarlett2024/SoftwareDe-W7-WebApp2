@@ -22,7 +22,9 @@ class ContactsController < ApplicationController
     @contact["phone_number"] = params["phone_number"]
 
     # assign relationship between Contact and Company
-    @contact["company_id"] = params["company_id"]
+    @companies = Company.all 
+    company = Company.find_by({"name" => params["company_id"]})
+    @contact["company_id"] = company["id"]
 
     # save Contact row
     @contact.save

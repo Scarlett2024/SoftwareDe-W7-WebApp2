@@ -7,14 +7,27 @@
 <h3>Contacts</h3>
 
 <ul>
-  <li>Michael Scott</li>
-  <li>Dwight Schrute</li>
+  <% for contact in @contacts %>
+  <a href="/contacts/<%= contact["id"] %>">
+  <li><%= contact["first_name"] %> <%= contact["last_name"] %></li>
+  </a>
+  <% end %>
 </ul>
 
+<!-- 
 <p>
-  <a href="/companies/new">New Contact</a>
+  <a href="companies/<% @company["id"] %>/edit">Edit Company Info</a>
+</p>
+-->
+
+<p>
+  <a href="/contacts/new">New Contact</a>
 </p>
 
 <p>
   <a href="/companies">Back to All Companies</a>
+</p>
+
+<p>
+<%= button_to "Delete this company", @company, :method => "delete" %>
 </p>

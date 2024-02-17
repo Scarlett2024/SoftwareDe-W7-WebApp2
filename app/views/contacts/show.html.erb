@@ -3,8 +3,8 @@
 <h1><%= @contact["last_name"] %>, <%= @contact["first_name"] %></h1>
 
 <ul>
-  <li><%= @contact["email"] %></li>
-  <li><%= @contact["phone_number"] %></li>
+  <li>Email: <%= @contact["email"] %></li>
+  <li>Phone number: <%= @contact["phone_number"] %></li>
 </ul>
 
 <p><a href="/companies/<%= @company["id"] %>">Back to <%= @company["name"] %></a></p>
